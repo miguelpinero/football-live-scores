@@ -4,8 +4,8 @@ import { Row, Col, Card } from "antd";
 export default function MatchesList({ matches }) {
   return (
     <Row>
-      {matches.map(match => (
-        <Col span={8}>
+      {matches.map((match, index) => (
+        <Col span={8} key={index}>
           <Card className="Matches-card">
             <div className="GeneralInformation">
               <span>
