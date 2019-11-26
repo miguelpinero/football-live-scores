@@ -10,8 +10,8 @@ const { Item } = Menu;
 const { Header } = Layout;
 
 const menuOrder = {
-  upcoming: "2",
-  live: "3"
+  "/upcoming": "2",
+  "/today": "3"
 };
 
 export default function Home() {
@@ -34,7 +34,7 @@ export default function Home() {
               <Link to="/upcoming">Upcoming matches </Link>
             </Item>
             <Item key="3">
-              <Link to="/live">Live</Link>
+              <Link to="/today">Today Matches</Link>
             </Item>
           </Menu>
         </Header>
@@ -45,7 +45,7 @@ export default function Home() {
           <Route path="/upcoming">
             <UpcomingMatches />
           </Route>
-          <Route path="/live">
+          <Route path="/today">
             <LiveMatches />
           </Route>
         </Switch>
