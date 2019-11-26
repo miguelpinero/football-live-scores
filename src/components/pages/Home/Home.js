@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
+import MatchesList from "./MatchesList/MatchesList";
+import Loader from "../../shared/Loader/Loader";
 import { fetchPastMatches } from "../../../services/liveScoreSevice";
 import { Layout, Menu } from "antd";
-import MatchesList from "./MatchesList";
-import Loader from "../../shared/Loader";
-import "antd/dist/antd.css";
 import "./Home.css";
 
 const { Item } = Menu;
@@ -14,13 +13,10 @@ function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true);
-
-    fetchPastMatches()
-      .then(matchesInformation => {
-        setMatches(matchesInformation);
-      })
-      .finally(() => setIsLoading(false));
+    fetchPastMatches().then(matchesInformation => {
+      setMatches(matchesInformation);
+      setIsLoading(false);
+    });
   }, []);
 
   return (

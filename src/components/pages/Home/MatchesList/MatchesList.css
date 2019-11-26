@@ -1,0 +1,31 @@
+.Matches {
+  background-color: white;
+  padding: 14px;
+  text-align: center;
+  overflow: scroll;
+}
+
+.Matches .Matches-card {
+  height: 115px;
+  margin: 5px;
+  text-align: left;
+}
+
+.Matches-card.away-winner .away-information {
+  font-weight: bold;
+}
+
+.Matches-card.home-winner .home-information {
+  font-weight: bold;
+}
+
+.TeamInformation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.GeneralInformation {
+  font-size: 10px;
+  color: gray;
+}
