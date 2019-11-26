@@ -1,0 +1,16 @@
+.NavigationBar .ant-menu {
+  line-height: 64px;
+}
+
+.Container {
+  height: calc(100vh - 64px);
+}
+
+.Container .Content-wrapper {
+  padding: 24px 280px;
+}
+
+.Matches {
+  background-color: white;
+  padding: 14px 24px;
+}
