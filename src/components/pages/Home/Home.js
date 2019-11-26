@@ -8,7 +8,7 @@ import "./Home.css";
 const { Item } = Menu;
 const { Header, Content } = Layout;
 
-function Home() {
+export default function Home() {
   const [matches, setMatches] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -41,5 +41,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
