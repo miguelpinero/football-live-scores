@@ -1,4 +1,5 @@
 import { buildURL } from "../lib/buildURL";
+import { matchesParser } from "../lib/matchesParser";
 
 const FROM = "2019-11-01";
 const TO = "2019-11-25";
@@ -11,5 +12,7 @@ export function fetchPastMatches(
   competition_id = COMPETITION_ID
 ) {
   const url = buildURL({ baseUrl: PAST_MATCHES_URL, from, to, competition_id });
-  return fetch(url).then(response => response.json());
+  return fetch(url)
+    .then(response => response.json())
+    .then(data => matchesParser(data));
 }

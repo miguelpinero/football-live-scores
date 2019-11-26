@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { fetchPastMatches } from "../../../services/liveScoreSevice";
 import { Layout, Menu } from "antd";
+import MatchesList from "./MatchesList";
+import Loader from "../../shared/Loader";
 import "antd/dist/antd.css";
 import "./Home.css";
 
@@ -8,10 +10,17 @@ const { Item } = Menu;
 const { Header, Content } = Layout;
 
 function Home() {
+  const [matches, setMatches] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    fetchPastMatches().then(data => {
-      console.log(data);
-    });
+    setIsLoading(true);
+
+    fetchPastMatches()
+      .then(matchesInformation => {
+        setMatches(matchesInformation);
+      })
+      .finally(() => setIsLoading(false));
   }, []);
 
   return (
@@ -27,7 +36,9 @@ function Home() {
         </Header>
         <Layout className="Container">
           <Layout className="Content-wrapper">
-            <Content className="Matches">Content</Content>
+            <Content className="Matches">
+              {isLoading ? <Loader /> : <MatchesList matches={matches} />}
+            </Content>
           </Layout>
         </Layout>
       </Layout>

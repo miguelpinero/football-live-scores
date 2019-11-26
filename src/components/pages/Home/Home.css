@@ -12,5 +12,29 @@
 
 .Matches {
   background-color: white;
-  padding: 14px 24px;
+  padding: 14px;
+  text-align: center;
+  overflow: scroll;
+}
+
+.Matches .Matches-card {
+  height: 115px;
+  margin: 5px;
+  text-align: left;
+}
+
+.TeamInformation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.GeneralInformation {
+  font-size: 10px;
+  color: gray;
+}
+
+.Loader {
+  width: 250px;
+  margin-top: 220px;
 }
