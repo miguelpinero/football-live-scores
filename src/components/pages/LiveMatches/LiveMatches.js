@@ -14,7 +14,6 @@ export default function LiveMatches() {
   const [isLoading, setIsLoading] = useState(true);
 
   useInterval(() => {
-    setIsLoading(true);
     fetchLiveMatches().then(liveMatches => {
       setMatches(liveMatches);
       setIsLoading(false);
