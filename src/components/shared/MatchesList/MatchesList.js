@@ -3,7 +3,7 @@ import classnames from "classnames";
 import { Row, Col, Card } from "antd";
 import "./MatchesList.css";
 
-export default function MatchesList({ matches }) {
+export default function MatchesList({ matches, children }) {
   return (
     <Row>
       {matches.map((match, index) => {
@@ -12,14 +12,18 @@ export default function MatchesList({ matches }) {
           "away-winner": match.isAwayWinner
         });
 
+        const cardHeader = children ? (
+          children(match)
+        ) : (
+          <span>
+            {match.date}, {match.scheduled} - {match.location}
+          </span>
+        );
+
         return (
           <Col span={8} key={index}>
             <Card className={cardClassnames}>
-              <div className="GeneralInformation">
-                <span>
-                  {match.date}, {match.scheduled} - {match.location}
-                </span>
-              </div>
+              <div className="GeneralInformation">{cardHeader}</div>
               <div className="TeamInformation home-information">
                 <span className="TeamName">{match.homeName}</span>
                 <span className="Score">{match.homeScore}</span>
