@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/football-live-scores/static/css/main.abd21947.chunk.css",
+    "main.js": "/football-live-scores/static/js/main.925e9a59.chunk.js",
+    "main.js.map": "/football-live-scores/static/js/main.925e9a59.chunk.js.map",
+    "runtime-main.js": "/football-live-scores/static/js/runtime-main.ed13fda1.js",
+    "runtime-main.js.map": "/football-live-scores/static/js/runtime-main.ed13fda1.js.map",
+    "static/css/2.90172c5a.chunk.css": "/football-live-scores/static/css/2.90172c5a.chunk.css",
+    "static/js/2.361ad6e5.chunk.js": "/football-live-scores/static/js/2.361ad6e5.chunk.js",
+    "static/js/2.361ad6e5.chunk.js.map": "/football-live-scores/static/js/2.361ad6e5.chunk.js.map",
+    "index.html": "/football-live-scores/index.html",
+    "precache-manifest.b270edd64eceec661727acd9c0a2452c.js": "/football-live-scores/precache-manifest.b270edd64eceec661727acd9c0a2452c.js",
+    "service-worker.js": "/football-live-scores/service-worker.js",
+    "static/css/2.90172c5a.chunk.css.map": "/football-live-scores/static/css/2.90172c5a.chunk.css.map",
+    "static/css/main.abd21947.chunk.css.map": "/football-live-scores/static/css/main.abd21947.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed13fda1.js",
+    "static/css/2.90172c5a.chunk.css",
+    "static/js/2.361ad6e5.chunk.js",
+    "static/css/main.abd21947.chunk.css",
+    "static/js/main.925e9a59.chunk.js"
+  ]
+}
