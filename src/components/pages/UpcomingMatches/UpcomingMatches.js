@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import MatchesList from "../../shared/MatchesList/MatchesList";
-import Loader from "../../shared/Loader/Loader";
-import { fetchUpcomingMatches } from "../../../services/liveScoreSevice";
+import MatchesList from "components/shared/MatchesList/MatchesList";
+import Loader from "components/shared/Loader/Loader";
+import { fetchUpcomingMatches } from "services/liveScoreSevice";
 import { Layout } from "antd";
 
 const { Content } = Layout;

@@ -1,7 +1,7 @@
 import React from "react";
-import PastMatches from "../PastMatches";
-import UpcomingMatches from "../UpcomingMatches";
-import LiveMatches from "../LiveMatches";
+import PastMatches from "components/pages/PastMatches";
+import UpcomingMatches from "components/pages/UpcomingMatches";
+import LiveMatches from "components/pages/LiveMatches";
 import { Switch, Route, Link, useLocation } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import "./Home.css";

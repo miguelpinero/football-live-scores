@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import MatchesList from "../../shared/MatchesList/MatchesList";
-import Loader from "../../shared/Loader/Loader";
-import useInterval from "../../../lib/useInterval";
+import MatchesList from "components/shared/MatchesList/MatchesList";
+import Loader from "components/shared/Loader/Loader";
+import useInterval from "lib/useInterval";
 import CustomCardHeader from "./CustomCardHeader";
 import EmptyView from "./EmptyView";
-import { fetchLiveMatches } from "../../../services/liveScoreSevice";
+import { fetchLiveMatches } from "services/liveScoreSevice";
 import { Layout } from "antd";
 import "./LiveMatches.css";
 
