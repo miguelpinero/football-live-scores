@@ -36,5 +36,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://livescore-api.com"
+  "proxy": "http://localhost:4000"
 }
