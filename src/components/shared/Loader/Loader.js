@@ -1,7 +1,11 @@
 import React from "react";
-import loader from "../../../Alternate-Preloader.gif";
+import { Spin } from "antd";
 import "./Loader.css";
 
 export default function Loader() {
-  return <img className="Loader" src={loader} alt="Loader" />;
+  return (
+    <div className="Loader">
+      <Spin size="large" />
+    </div>
+  );
 }

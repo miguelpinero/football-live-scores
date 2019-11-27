@@ -11,22 +11,18 @@ const { Header } = Layout;
 
 const menuOrder = {
   "/upcoming": "2",
-  "/today": "3"
+  "/live": "3"
 };
 
 export default function Home() {
   let location = useLocation();
-  const defaultMenu = menuOrder[location.pathname] || "1";
+  const selectedKey = menuOrder[location.pathname] || "1";
 
   return (
     <div className="App">
       <Layout className="NavigationBar">
         <Header className="NavigationBar-header">
-          <Menu
-            theme="dark"
-            mode="horizontal"
-            defaultSelectedKeys={[defaultMenu]}
-          >
+          <Menu theme="dark" mode="horizontal" selectedKeys={[selectedKey]}>
             <Item key="1">
               <Link to="/">Past matches </Link>
             </Item>
@@ -34,7 +30,7 @@ export default function Home() {
               <Link to="/upcoming">Upcoming matches </Link>
             </Item>
             <Item key="3">
-              <Link to="/today">Today Matches</Link>
+              <Link to="/live">Live Matches</Link>
             </Item>
           </Menu>
         </Header>
@@ -45,7 +41,7 @@ export default function Home() {
           <Route path="/upcoming">
             <UpcomingMatches />
           </Route>
-          <Route path="/today">
+          <Route path="/live">
             <LiveMatches />
           </Route>
         </Switch>

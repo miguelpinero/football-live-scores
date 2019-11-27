@@ -2,3 +2,7 @@
   color: red;
   font-weight: bold;
 }
+
+.Matches .EmptyView {
+  padding-top: 185px;
+}
