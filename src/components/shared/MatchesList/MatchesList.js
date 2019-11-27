@@ -16,7 +16,7 @@ export default function MatchesList({ matches, children }) {
           children(match)
         ) : (
           <span>
-            {match.date}, {match.scheduled} - {match.location}
+            {match.date}, {match.scheduled || match.time} - {match.location}
           </span>
         );
 

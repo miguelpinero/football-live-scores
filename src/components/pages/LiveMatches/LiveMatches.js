@@ -12,7 +12,6 @@ const { Content } = Layout;
 
 export default function LiveMatches() {
   const [matches, setMatches] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [isFirstLoad, setIsFirstLoad] = useState(true);
 
   useEffect(() => {
@@ -23,10 +22,8 @@ export default function LiveMatches() {
   }, []);
 
   useInterval(() => {
-    setIsLoading(true);
     fetchLiveMatches().then(liveMatches => {
       setMatches(liveMatches);
-      setIsLoading(false);
     });
   }, 50000);
 

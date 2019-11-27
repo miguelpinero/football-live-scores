@@ -2,7 +2,7 @@ import { buildURL } from "../lib/buildURL";
 import { upcomingMatchesParser, matchesParser } from "../lib/matchesParser";
 
 const FROM = "2019-11-01";
-const TO = "2019-11-26";
+const TO = "2019-11-27";
 const COMPETITION_ID = "244";
 const PAST_MATCHES_URL = "/api-client/scores/history.json";
 const UPCOMING_MATCHES_URL = "/api-client/fixtures/matches.json";
